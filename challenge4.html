@@ -9,14 +9,16 @@
       font-size: 20px;
       font-family: cursive;
       font-weight: 700;
+      display: none;
     }   
     </style>
     
     <script type="text/javascript">
     function checkForm () {
+        var is_valid = true;
        if (document.getElementById("fullname").value == "") {
           document.getElementById("nameerrormsg").style.display = 'block';
-   
+          is_valid = false;
         }
         else {
           document.getElementById("nameerrormsg").style.display = 'none';
@@ -24,17 +26,19 @@
 
         if (document.getElementById("streetaddr").value == "") {
           document.getElementById("addrerrormsg").style.display = 'block';
-   
+          is_valid = false;
         }
         else {
           document.getElementById("addrerrormsg").style.display = 'none';
         }
 
+        return is_valid;
+
     }   
     </script>
 </head>
 <body>
-         <a href="/DianaJS/challenge1.html">Challenge 1</a>
+     <a href="/DianaJS/challenge1.html">Challenge 1</a>
     <a href="/DianaJS/challenge2.html">Challenge 2</a>
     <a href="/DianaJS/challenge3.html">Challenge 3</a>
     <a href="/DianaJS/challenge4.html">Challenge 4</a>
